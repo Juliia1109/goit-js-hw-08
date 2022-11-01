@@ -1,13 +1,13 @@
 import throttle from 'lodash.throttle';
 
-const CONTACT_FORM_LS_KEY = 'feedback-msg';
+const CONTACT_FORM_LS_KEY = 'feedback-form-state';
 
 const formData = {};
 
 const form = document.querySelector('.feedback-form');
 
 form.addEventListener('submit', onFormSubmit);
-form.addEventListener('input', throttle(onFormData, 300));
+form.addEventListener('input', throttle(onFormData, 500));
 
 function onFormSubmit(evt) {
   evt.preventDefault();
